@@ -8,9 +8,9 @@ Different functions used are specified as:
      
 > merchant_vpa_profile : return details of a particular merchant
 
-> missing_transactions_details : return details of transactions ids not in *fp_ledger*
+> missing_transactions_details : return details of transactions ids not in **fp_ledger**
 
-> swipe_inactivity : return *merchant_id* and *device_serial* of inactive machines from *bharatpeswipe_terminal* BQ table
+> swipe_inactivity : return *merchant_id* and *device_serial* of inactive machines from **bharatpeswipe_terminal** BQ table
 
 > declined_transactions : return the rejection reason of transactions from Top Payment Gateway Providers
 
