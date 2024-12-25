@@ -1,0 +1,13 @@
+# Function dependencies, for example:
+# package>=version
+pandas==1.2.2
+numpy ==1.20.2
+google-oauth ==1.0.1
+py-oauth2 == 0.0.10
+google-auth ==1.28.0
+SQLAlchemy == 1.4.4
+pandas-gbq == 0.15.0
+requests == 2.25.1
+google-auth-oauthlib ==0.4.4
+google-cloud == 0.34.0
+google-cloud-storage >=1.32.0
