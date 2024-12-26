@@ -9,10 +9,11 @@ Different functions used are specified as:
 sample request json :
 ```
 {
+    "table":"transactions",
     "from": "2024-01-01",
     "to": "2024-01-31",
     "module": "PAYMENT_SWIPE",
-    "merchant_id": 12345,
+    "merchant_id": 343994,
     "pageCount": 1,
     "pageSize": 20
   }
@@ -21,36 +22,28 @@ sample request json :
 > merchant_vpa_profile : return details of a particular merchant
 ```
 {
-    "table": "settlement_request",
-    "created_at": "2024-01-01",
-    "transaction_date": "2024-01-01"
+    "table": "merchant_vpa_profile",
+    "merchant_id":11067
 }
 ```
 
 > missing_transactions_details : return details of transactions ids not in **fp_ledger**
 ```
 {
-    "merchant_id": 12345,
-    "table": "merchant_vpa_profile_temp"
+    "identifier":"missing_transactions",
+    "created_at": "2024-01-01",
+    "ids": [101, 102, 103]
 }
 ```
 
 > swipe_inactivity : return *merchant_id* and *device_serial* of inactive machines from **bharatpeswipe_terminal** BQ table
 ```
 {
-    "created_at": "2024-01-01",
-    "ids": [101, 102, 103]
-}
-```
-
-> declined_transactions : return the rejection reason of transactions from Top Payment Gateway Providers
-```
-{
     "inactivityDays": 30
 }
 ```
 
-> payment_settlement_reco : request to query a BigQuery table for payment and settlement data based on input parameters.
+> declined_transactions : return the rejection reason of transactions from Top Payment Gateway Providers
 ```
 {
     "merchant_id": 12345,
@@ -58,5 +51,14 @@ sample request json :
     "rejected_after": "2024-01-01",
     "pageCount": 1,
     "pageSize": 20
+}
+```
+
+> payment_settlement_reco : request to query a BigQuery table for payment and settlement data based on input parameters.
+```
+{
+    "table": "settlement_request",
+    "created_at": "2024-01-01",
+    "transaction_date": "2024-01-01"
 }
 ```
